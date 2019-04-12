@@ -35,7 +35,7 @@ Click `Wio LTE for Arduino by Seeed K.K.` then an Install button appear, click o
 Connect [Grove - Buzzer](https://www.seeedstudio.com/Grove-Buzzer-p-768.html) or [Grove - Red LED](https://www.seeedstudio.com/Grove-Red-LED-p-1142.html) to D38 of Wio LTE.
 
 ## Sample sketch
-Unzip the sample sketch, and open `wiortc-sample.ino` with Arduino IDE.
+Unzip the [sample sketch](https://github.com/Seeed-Studio/Wio_Extension_RTC/raw/master/wiortc-sample.zip), and open `wiortc-sample.ino` with Arduino IDE.
 As you can read from the sample sketch, Wio Extension - RTC set to shut down the system for 30 sec on
 ```
 RTC.SetWakeupPeriod(BOOT_INTERVAL);
@@ -48,3 +48,5 @@ RTC.Shutdown();
 # Tips
 ## Power source
 When you use mobile battery as the power source of the system, you need to choose **non smart** power bank. Typical mobile battery have automatic power off function. And the battery shut off the power supply itself when Wio Entension - RTC enters stand-by, since its stand-by current less than 1 uA and it's too weak for the threshold of the battery.
+## For non Wio LTE Boards
+Since Wio Extension - RTC just controlling USB power supply set from I2C, you can use this board to manage the power supply almost for every MCU boards powering from USB.
